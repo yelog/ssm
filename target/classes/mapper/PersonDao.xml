@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace指定我们的到具体的bean -->
+<mapper namespace="com.faker.model">
+
+    <!--查找-->
+    <select id="findOneById" resultType="Person" parameterType="Integer">
+    SELECT  * from person WHERE id = #{id}
+    </select>
+
+    <!--增加语句-->
+    <insert id="add" parameterType="Person">
+        INSERT INTO person(username,password,age,gender,used) VALUES (#{username},#{password},#{age},#{gender},#{used})
+    </insert>
+
+    <!-- 删除 -->
+    <update id="del" parameterType="Person">
+        UPDATE person set used = FALSE WHERE id=#{id};
+    </update>
+
+    <!-- 更新用户信息 -->
+    <update id="update" parameterType="Person">
+        UPDATE person SET username=#{username},password=#{password},age=#{age},gender=#{gender},used=#{used} WHERE id=#{id}
+    </update>
+</mapper>

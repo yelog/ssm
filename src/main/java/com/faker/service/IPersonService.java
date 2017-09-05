@@ -1,6 +1,6 @@
 package com.faker.service;
 
-import com.faker.model.Person;
+import com.faker.model.po.Person;
 
 import java.util.List;
 

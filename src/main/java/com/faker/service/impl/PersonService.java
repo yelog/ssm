@@ -1,7 +1,7 @@
 package com.faker.service.impl;
 
-import com.faker.dao.PersonDao;
-import com.faker.model.Person;
+import com.faker.data.PersonMapper;
+import com.faker.model.po.Person;
 import com.faker.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,21 +15,21 @@ import java.util.List;
 public class PersonService implements IPersonService {
 
     @Autowired
-    PersonDao personDao;
+    PersonMapper personMapper;
 
     public List<Person> listAll() {
-        return personDao.findAll();
+        return personMapper.findAll();
     }
 
     public Person getById(Integer id) {
-        return personDao.findOneById(id);
+        return personMapper.findOneById(id);
     }
 
     public Integer delById(Person person) {
-        return personDao.del(person);
+        return personMapper.del(person);
     }
 
     public Integer updatePerson(Person person) {
-        return personDao.update(person);
+        return personMapper.update(person);
     }
 }

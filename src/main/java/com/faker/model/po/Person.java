@@ -1,4 +1,4 @@
-package com.faker.model;
+package com.faker.model.po;
 
 import java.io.Serializable;
 

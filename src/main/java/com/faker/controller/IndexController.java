@@ -1,6 +1,6 @@
 package com.faker.controller;
 
-import com.faker.model.Person;
+import com.faker.model.po.Person;
 import com.faker.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

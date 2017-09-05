@@ -1,13 +1,14 @@
 package com.faker.dao;
 
 import com.faker.model.Person;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by faker on 16-11-2.
  */
+@Component
 public interface PersonDao extends Dao<Person> {
     int add(Person person);
 
@@ -16,6 +17,4 @@ public interface PersonDao extends Dao<Person> {
     int update(Person person);
 
     Person findOneById(Serializable Id);
-
-    List<Person> findAll();
 }

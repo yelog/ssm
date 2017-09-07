@@ -1,11 +1,9 @@
 package com.faker.model.po;
 
-import java.io.Serializable;
-
 /**
  * Created by faker on 16-11-2.
  */
-public class Person implements Serializable{
+public class Person implements IEntity<Integer>{
     private Integer id;
     private String username;
     private String password;

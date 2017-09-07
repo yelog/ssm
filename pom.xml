@@ -5,8 +5,7 @@
     <artifactId>ssm</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>ssm Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+    <name>ssm</name>
     <!-- 构建项目的最终名称 -->
     <build>
         <finalName>SSM_Faker</finalName>
@@ -16,6 +15,9 @@
     <!-- 要针对某个依赖进行升级的时候只需要更改下面对应的版本号 -->
     <!-- 在上面使用版本号的时候需要用固定格式,如: ${包名.version} -->
     <properties>
+        <nexus.ip>192.168.0.86:8081</nexus.ip>
+        <repository.nexus.url>http://${nexus.ip}/repository/maven-public/</repository.nexus.url>
+        <soul.version>1.0-SNAPSHOT</soul.version>
         <junit.version>4.12</junit.version>
         <org.slf4j.version>1.7.21</org.slf4j.version>
         <org.apache.logging.log4j.version>2.6.2</org.apache.logging.log4j.version>
@@ -28,7 +30,6 @@
         <org.springframework.version>4.3.2.RELEASE</org.springframework.version>
         <redis.clients.version>2.7.3</redis.clients.version>
         <com.dyuproject.protostuff.version>1.0.8</com.dyuproject.protostuff.version>
-        <developer.organization><![CDATA[scengine]]></developer.organization>
     </properties>
 
     <dependencies>
@@ -202,5 +203,31 @@
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.soul</groupId>
+            <artifactId>commons</artifactId>
+            <version>${soul.version}</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>public Repository</name>
+            <url>${repository.nexus.url}</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>${repository.nexus.url}</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

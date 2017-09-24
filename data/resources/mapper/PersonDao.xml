@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace指定我们的到具体的bean -->
+<mapper namespace="com.ssm.data.PersonMapper">
+
+    <!--查找-->
+    <select id="findOneById" resultType="com.ssm.model.person.po.Person" parameterType="Integer">
+    SELECT  * from person WHERE id = #{id}
+    </select>
+
+    <!--增加语句-->
+    <insert id="add" parameterType="com.ssm.model.person.po.Person">
+        INSERT INTO person(username,password,age,gender,used) VALUES (#{username},#{password},#{age},#{gender},#{used})
+    </insert>
+
+    <!-- 删除 -->
+    <update id="del" parameterType="com.ssm.model.person.po.Person">
+        UPDATE person set used = FALSE WHERE id=#{id};
+    </update>
+
+    <!-- 更新用户信息 -->
+    <update id="update" parameterType="com.ssm.model.person.po.Person">
+        UPDATE person SET username=#{username},password=#{password},age=#{age},gender=#{gender},used=#{used} WHERE id=#{id}
+    </update>
+
+    <!-- 查询所有的人 -->
+    <select id="findAll" resultType="com.ssm.model.person.po.Person">
+        SELECT * from person;
+    </select>
+</mapper>

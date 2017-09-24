@@ -7,12 +7,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/websites/site/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../soul/commons/pom.xml" />
         <option value="$PROJECT_DIR$/../soul/pom.xml" />
+        <option value="$PROJECT_DIR$/websites/pom.xml" />
       </set>
     </option>
   </component>

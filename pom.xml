@@ -1,10 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.faker</groupId>
+    <groupId>com.ssm</groupId>
     <artifactId>ssm</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>model</module>
+        <module>iservice</module>
+        <module>common</module>
+        <module>data</module>
+        <module>service</module>
+        <module>websites</module>
+        <module>webcommon</module>
+    </modules>
     <name>ssm</name>
     <!-- 构建项目的最终名称 -->
     <build>
@@ -18,6 +27,7 @@
         <nexus.ip>192.168.0.86:8081</nexus.ip>
         <repository.nexus.url>http://${nexus.ip}/repository/maven-public/</repository.nexus.url>
         <soul.version>1.0-SNAPSHOT</soul.version>
+        <ssm.version>1.0-SNAPSHOT</ssm.version>
         <junit.version>4.12</junit.version>
         <org.slf4j.version>1.7.21</org.slf4j.version>
         <org.apache.logging.log4j.version>2.6.2</org.apache.logging.log4j.version>
@@ -30,6 +40,9 @@
         <org.springframework.version>4.3.2.RELEASE</org.springframework.version>
         <redis.clients.version>2.7.3</redis.clients.version>
         <com.dyuproject.protostuff.version>1.0.8</com.dyuproject.protostuff.version>
+        <dubbo.version>2.5.5</dubbo.version>
+        <zookeeper_version>3.4.9</zookeeper_version>
+        <zkclient_version>0.2</zkclient_version>
     </properties>
 
     <dependencies>
@@ -59,6 +72,21 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${org.apache.logging.log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient_version}</version>
         </dependency>
 
 

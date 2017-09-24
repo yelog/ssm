@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.ssm</groupId>
             <artifactId>model</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${ssm.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -38,26 +38,6 @@
                 <version>2.6</version>
                 <configuration>
                     <warSourceDirectory>WebContent</warSourceDirectory>
-                    <webResources>
-                        <resource>
-                            <directory>${basedir}/../../config/common/</directory>
-                            <filtering>true</filtering>
-                            <targetPath>/WEB-INF/classes/conf</targetPath>
-                        </resource>
-                        <resource>
-                            <directory>${basedir}/../../config/webcommon/</directory>
-                            <filtering>true</filtering>
-                            <targetPath>/WEB-INF/classes/conf</targetPath>
-                        </resource>
-                        <resource>
-                            <directory>${basedir}/../rcenter/WebContent/WEB-INF/tags</directory>
-                            <targetPath>/WEB-INF/tags</targetPath>
-                        </resource>
-                        <resource>
-                            <directory>${basedir}/../webcommon/WebContent</directory>
-                            <targetPath>/</targetPath>
-                        </resource>
-                    </webResources>
                 </configuration>
             </plugin>
         </plugins>

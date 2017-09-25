@@ -17,15 +17,11 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.5" />
-      <module name="commons" target="1.5" />
       <module name="data" target="1.5" />
       <module name="iservice" target="1.5" />
       <module name="model" target="1.5" />
-      <module name="msite" target="1.5" />
-      <module name="msites" target="1.5" />
       <module name="service" target="1.5" />
       <module name="site" target="1.5" />
-      <module name="soul" target="1.5" />
       <module name="ssm" target="1.5" />
       <module name="webcommon" target="1.5" />
       <module name="websites" target="1.5" />

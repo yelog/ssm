@@ -26,8 +26,4 @@ public class IndexController {
         model.addAttribute("command",list);
         return "index";
     }
-
-    public static void main(String[] args) {
-
-    }
 }

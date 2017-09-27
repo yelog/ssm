@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace指定我们的到具体的bean -->
-<mapper namespace="com.ssm.data.PersonMapper">
+<mapper namespace="com.ssm.data.mapper.PersonMapper">
 
     <!--查找-->
     <select id="findOneById" resultType="com.ssm.model.person.po.Person" parameterType="Integer">

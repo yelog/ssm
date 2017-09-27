@@ -22,7 +22,7 @@ public class IndexController {
     @RequestMapping("/index.html")
     public String index(Model model) {
         RpcContext.getContext().setAttachment("index", "1");//测试ThreadLocal
-        List<Person> list = personService.listAll();
+        List<Person> list = personService.selectList(null);
         model.addAttribute("command",list);
         return "index";
     }

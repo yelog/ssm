@@ -32,5 +32,10 @@
             <artifactId>model</artifactId>
             <version>${ssm.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ssm</groupId>
+            <artifactId>common</artifactId>
+            <version>${ssm.version}</version>
+        </dependency>
     </dependencies>
 </project>

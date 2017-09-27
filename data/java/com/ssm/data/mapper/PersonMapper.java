@@ -1,5 +1,6 @@
-package com.ssm.data;
+package com.ssm.data.mapper;
 
+import com.ssm.data.common.BaseMapper;
 import com.ssm.model.person.po.Person;
 import org.springframework.stereotype.Component;
 

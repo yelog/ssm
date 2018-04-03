@@ -20,9 +20,6 @@
     <!-- 要针对某个依赖进行升级的时候只需要更改下面对应的版本号 -->
     <!-- 在上面使用版本号的时候需要用固定格式,如: ${包名.version} -->
     <properties>
-        <nexus.ip>192.168.0.86:8081</nexus.ip>
-        <repository.nexus.url>http://${nexus.ip}/repository/maven-public/</repository.nexus.url>
-        <soul.version>1.0-SNAPSHOT</soul.version>
         <ssm.version>1.0-SNAPSHOT</ssm.version>
         <junit.version>4.12</junit.version>
         <org.slf4j.version>1.7.21</org.slf4j.version>
@@ -41,6 +38,10 @@
         <zkclient_version>0.2</zkclient_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mybatis.plus>2.1.2</mybatis.plus>
+        <mysql.version>6.0.6</mysql.version>
+        <maven-war-plugin.version>3.2.0</maven-war-plugin.version>
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+        <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
@@ -89,11 +90,11 @@
 
 
         <!-- 2.数据库 -->
-        <!--PostgreSQL-->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${PostgreSQL.version}</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
         <!--druid==>阿里巴巴数据库连接池-->
         <dependency>
@@ -235,27 +236,6 @@
             <version>${mybatis.plus}</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>public</id>
-            <name>public Repository</name>
-            <url>${repository.nexus.url}</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>public</id>
-            <name>Public Repositories</name>
-            <url>${repository.nexus.url}</url>
-        </pluginRepository>
-    </pluginRepositories>
 
     <build>
         <plugins>

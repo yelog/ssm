@@ -24,7 +24,7 @@
     <dubbo:application name="demo-consumer"/>
 
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
-    <dubbo:registry address="zookeeper://192.168.0.86:2181"/>
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference id="personService" check="false" interface="com.ssm.iservice.IPersonService"/>
